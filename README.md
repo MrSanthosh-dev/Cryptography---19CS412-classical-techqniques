@@ -304,7 +304,7 @@ int invkeymat[3][3] = { { -1, 0, 1 }, { 2, -1, 0 }, { -2, 2, -1 } };
 char key[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char* encode(char a, char b, char c) 
 {
-    char* ret = (char*)malloc(4); // dynamically allocate memory for ret
+    char* ret = (char*)malloc(4); 
     int x, y, z;
     int posa = (int) a - 65;
     int posb = (int) b - 65;
@@ -320,7 +320,7 @@ char* encode(char a, char b, char c)
 }
 char* decode(char a, char b, char c)
 {
-    char* ret = (char*)malloc(4); // dynamically allocate memory for ret
+    char* ret = (char*)malloc(4); 
     int x, y, z;
     int posa = (int) a - 65;
     int posb = (int) b - 65;
