@@ -60,14 +60,12 @@ caesarEncrypt(text, -key);
 int main() {
 char message[100]; 
 int key;
-
 printf("Enter the message to encrypt: ");
-fgets(message, sizeof(message), stdin); // Read input from the user 
+fgets(message, sizeof(message), stdin); 
 printf("Enter the Caesar Cipher key (an integer): ");
-scanf("%d", &key); // Read the key from the user
+scanf("%d", &key); 
 caesarEncrypt(message, key); 
 printf("Encrypted Message: %s", message);
- 
 caesarDecrypt(message, key); 
 printf("Decrypted Message: %s", message);
 return 0;
@@ -156,9 +154,7 @@ for (i = 0; i < ks; i++) {
 if (key[i] != 'j')
 dicty[key[i] - 97] = 2;
 }
-
 dicty['j' - 97] = 1;
-
 i = 0;
 j = 0;
 for (k = 0; k < ks; k++) {
@@ -170,7 +166,6 @@ i++; j = 0;
 }
 }
 }
-
 for (k = 0; k < 26; k++) {
 if (dicty[k] == 0) {
 keyT[i][j] = (char)(k + 97);
@@ -242,7 +237,6 @@ void encryptByPlayfairCipher(char str[], char key[])
 char ps, ks, keyT[5][5];
 ks = strlen(key);
 ks = removeSpaces(key, ks); toLowerCase(key, ks);
-
 ps = strlen(str); toLowerCase(str, ps);
 ps = removeSpaces(str, ps); ps = prepare(str, ps);
 generateKeyTable(key, ks, keyT); encrypt(str, keyT, ps);
@@ -251,15 +245,12 @@ generateKeyTable(key, ks, keyT); encrypt(str, keyT, ps);
 int main()
 {
 char str[SIZE], key[SIZE];
-
 strcpy(key, "Monarchy"); 
 printf("Key text: %s\n", key);
 strcpy(str, "instruments"); 
 printf("Plain text: %s\n", str);
-
 encryptByPlayfairCipher(str, key);
 printf("Cipher text: %s\n", str);
-
 return 0;
 }
 ```
